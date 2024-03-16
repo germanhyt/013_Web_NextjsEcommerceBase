@@ -1,0 +1,869 @@
+// ========================= Styles ===========================
+.slider {
+  width: 350px;
+  height: 350px;
+}
+
+.each-slide-effect > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 350px;
+}
+
+.each-slide-effect span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+
+.bg-triangle {
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 50%);
+}
+
+.bg-triangle__responsive {
+  clip-path: circle(52.2% at 99% 50%);
+}
+
+// ====== Cart Menu =======
+ul {
+  padding-bottom: 0 !important;
+  li {
+    justify-content: space-around !important;
+  }
+}
+.tituloCart {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.menuCart {
+  .MuiPaper-root {
+    min-width: 500px !important;
+    @media screen and (max-width:540px) {
+      min-width: 340px !important ;
+    }
+  }
+  p {
+    @media screen and (max-width:540px) {
+      font-size: 0.8rem;
+    }
+    
+  }
+}
+.itemCart {
+  width: auto;
+  height: auto;
+  display: flex;
+
+  img {
+    width: 90px;
+    height: 90px;
+    @media screen and (max-width: 540px) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .btnDelete {
+    color: #071717;
+  }
+}
+.btnConcluirCompra {
+  width: 100%;
+  text-align: center !important;
+  background-color: black !important;
+  color: white !important;
+  margin-top: 1rem !important;
+}
+p {
+  color: black;
+  margin: 0 5px;
+}
+
+// body {
+//   width: 100vw;
+//   height: 100vh;
+//   background: #151515;
+//   overflow: hidden;
+//   padding: 0;
+//   margin: 0;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .example-container {
+//   width: 100vw;
+//   height: 100vh;
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .next,
+// .prev {
+//   top: calc(50% - 20px);
+//   position: absolute;
+//   background: white;
+//   border-radius: 30px;
+//   width: 40px;
+//   height: 40px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   user-select: none;
+//   cursor: pointer;
+//   font-weight: bold;
+//   font-size: 18px;
+//   z-index: 2;
+// }
+
+// .next {
+//   right: 10px;
+// }
+
+// .prev {
+//   left: 10px;
+//   transform: scale(-1);
+// }
+
+// img {
+//   position: absolute;
+//   max-width: 100vw;
+// }
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+// ========================= Styles Examples ===========================
+// .group__text {
+//   background-color: $white;
+//   min-width: 2.5rem;
+//   margin-right: 0.25rem;
+//   max-width: 4rem;
+// }
+
+// // map styles end
+// .forms-sm {
+//   .form-label {
+//     margin-bottom: $input-padding-y-sm;
+//   }
+// }
+
+// .forms-xs {
+//   .form-label {
+//     margin-bottom: calc($input-padding-y-sm / 2);
+//   }
+// }
+
+// .form-control-xs {
+//   padding: calc($input-padding-y-sm / 2) calc($input-padding-x-sm / 2);
+//   font-size: $font-size-sm * 0.875;
+//   border-radius: calc($input-border-radius-sm * 0.75);
+// }
+
+// .form-label-truncate {
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+//   width: 100%;
+//   margin-bottom: 0.05rem;
+// }
+
+// .btn__download {
+//   background-color: transparent;
+//   margin-top: -0.25rem;
+//   margin-bottom: -0.25rem;
+//   padding-top: 0.1rem;
+//   padding-bottom: 0.1rem;
+
+//   &:hover {
+//     border-color: #2962ff;
+//     background-color: transparent;
+//   }
+// }
+
+// #dropdown-basic {
+//   &::before {
+//     display: inline-block;
+//     margin-right: 0.255em;
+//     vertical-align: 0.255em;
+//     content: "";
+//     border-top: 0.3em solid;
+//     border-right: 0.3em solid transparent;
+//     border-bottom: 0;
+//     border-left: 0.3em solid transparent;
+//   }
+
+//   &::after {
+//     content: none;
+//   }
+// }
+
+// .border-seleccionar {
+//   border: 2px dashed;
+//   border-radius: 4px;
+//   animation: borderAnimation 2s infinite;
+// }
+
+// @keyframes borderAnimation {
+//   0% {
+//     border-width: 2px;
+//   }
+//   50% {
+//     border-width: 5px;
+//   }
+//   100% {
+//     border-width: 2px;
+//   }
+// }
+
+// // ================ Customizing Vendor Styles =================
+
+// .is__control__calidad {
+//   .input-group {
+//     .react__select .rs_react__control {
+//       .rs_react__single-value--is-disabled,
+//       .rs_react__placeholder {
+//         color: var(--bs-primary, #00a39c);
+//       }
+//     }
+
+//     .form-control {
+//       color: var(--bs-primary, #00a39c);
+//     }
+//   }
+// }
+
+// .input-group {
+//   .react__select {
+//     position: relative;
+//     flex: 1 1 auto;
+//     width: 1%;
+//     min-width: 0;
+
+//     .rs_react__control {
+//       border-top-left-radius: 0;
+//       border-bottom-left-radius: 0;
+//     }
+//   }
+//   .react-datepicker-wrapper {
+//     position: relative;
+//     flex: 1 1 auto;
+//     width: 1%;
+//     min-width: 0;
+
+//     .form-control {
+//       border-top-left-radius: 0;
+//       border-bottom-left-radius: 0;
+//     }
+//   }
+// }
+// .input-group-sm {
+//   .input-group-text:has(.form-switch) {
+//     padding-right: 0.15rem;
+//     padding-left: 0.15rem;
+//   }
+// }
+
+// // react-select start
+// .react__select {
+//   .rs_react__control {
+//     border-color: $border-color;
+
+//     &:hover,
+//     &.rs_react__control--is-focused {
+//       border-color: $input-focus-border-color;
+//       outline: 0;
+//       box-shadow: $input-focus-box-shadow;
+//     }
+
+//     .rs_react__input-container {
+//       color: var(--bs-body-colo, #212529);
+//     }
+
+//     .rs_react__placeholder {
+//       color: var(--bs-secondary, #607d8b);
+//       overflow-x: hidden;
+//       white-space: nowrap;
+//       text-overflow: ellipsis;
+//     }
+
+//     &--is-disabled {
+//       background-color: $input-disabled-bg;
+//       border-color: $input-border-color;
+//     }
+
+//     .rs_react__single-value {
+//       &--is-disabled {
+//         color: var(--bs-body-colo, #212529);
+//       }
+//     }
+//   }
+// }
+
+// .react__select__sm {
+//   .rs_react__control {
+//     min-height: 31px;
+//     height: 31px;
+//     border-radius: $input-border-radius-sm;
+//     min-width: 60px;
+
+//     .rs_react__input-container {
+//       padding-top: 0;
+//       padding-bottom: 0;
+//     }
+
+//     .rs_react__value-container {
+//       font-size: $input-font-size-sm;
+//       padding: calc($input-padding-y-sm / 2) calc($input-padding-x-sm / 2);
+//     }
+
+//     .rs_react__indicators {
+//       // .rs_react__indicator-separator {
+//       // }
+//       .rs_react__clear-indicator,
+//       .rs_react__dropdown-indicator {
+//         padding: $input-padding-y-sm;
+//       }
+//     }
+//   }
+
+//   .rs_react__menu {
+//     font-size: $input-font-size-sm;
+//   }
+// }
+
+// .react__select__xs {
+//   .rs_react__control {
+//     min-height: 24.375px;
+//     height: 24.375px;
+//     border-radius: calc($input-border-radius-sm * 0.75);
+
+//     .rs_react__input-container {
+//       padding-top: 0;
+//       padding-bottom: 0;
+//     }
+
+//     .rs_react__value-container {
+//       font-size: $input-font-size-sm * 0.875;
+//       padding: calc($input-padding-y-sm / 3) calc($input-padding-x-sm / 2);
+//     }
+
+//     .rs_react__indicators {
+//       // .rs_react__indicator-separator {
+//       // }
+//       svg {
+//         width: 15px;
+//         height: 15px;
+//       }
+
+//       .rs_react__clear-indicator,
+//       .rs_react__dropdown-indicator {
+//         padding: calc($input-padding-y-sm / 3);
+//       }
+//     }
+//   }
+
+//   .rs_react__menu {
+//     font-size: $input-font-size-sm * 0.875;
+//   }
+// }
+
+// .react__select_density {
+//   &.react__select__sm {
+//     .rs_react__control {
+//       .rs_react__indicators {
+//         .rs_react__clear-indicator {
+//           padding: 0;
+
+//           svg {
+//             width: 15px;
+//           }
+//         }
+
+//         .rs_react__dropdown-indicator {
+//           padding: 0 0.1rem 0;
+
+//           svg {
+//             width: 18px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// // react-select end
+
+// // react-datepicker start
+// .react-datepicker-wrapper {
+//   display: block;
+// }
+
+// .react-datepicker__close-icon {
+//   &::after {
+//     border-radius: $input-border-radius-sm;
+//     padding: $input-padding-y-sm $input-padding-x-sm;
+//     font-size: $input-font-size-sm;
+//   }
+// }
+
+// .react-datepicker__year {
+//   &-wrapper {
+//     max-width: 204px;
+//   }
+// }
+
+// .react-datepicker__month {
+//   .react-datepicker__month-text,
+//   .react-datepicker__quarter-text {
+//     width: 4.5rem;
+//   }
+// }
+
+// .react-datepicker__day--today {
+//   border-radius: $datepicker__border-radius;
+//   border: $btn-border-width solid $datepicker__selected-color;
+// }
+
+// // react-datepicker end
+
+// // forms__input__uppercase start
+// .forms__input__uppercase {
+//   input,
+//   select,
+//   textarea,
+//   .rs_react__control {
+//     text-transform: uppercase;
+//   }
+// }
+// // forms__input__uppercase end
+
+// // Hide Arrows From Input Number
+// /* Chrome, Safari, Edge, Opera */
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
+// /* Firefox */
+// input[type="number"] {
+//   -moz-appearance: textfield;
+// }
+// // Hide Arrows From Input Number
+
+// .map__body {
+//   min-height: calc(100vh - 256px);
+// }
+
+// // Clase para Cambiar de Color images
+// .change-color-white:hover img {
+//   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(278deg)
+//     brightness(104%) contrast(101%);
+// }
+
+// // Calse para botones Inabilitados
+// .btn-inabilitado {
+//   border-color: rgb(44, 54, 69);
+//   border: none;
+//   position: relative;
+//   color: rgb(44, 54, 69);
+//   border: 1px solid rgb(44, 54, 69);
+//   padding-top: 0.25rem;
+//   padding-bottom: 0.25rem;
+//   padding-left: 0.5rem;
+//   padding-right: 0.5rem;
+//   font-size: 0.875rem;
+//   border-radius: 0.25rem;
+//   text-align: center;
+//   text-decoration: none;
+//   vertical-align: middle;
+// }
+
+// .btn-inabilitado:disabled {
+//   background-color: #dadbdd;
+//   color: #a4a7a9;
+//   font-weight: 500;
+//   border: 1px solid #a4a7a9;
+// }
+
+// .btn-inabilitado:disabled:hover {
+//   background-color: #dadbdd;
+//   color: #a4a7a9;
+//   border: 1px solid #a4a7a9;
+// }
+
+// .btn-inabilitado:hover {
+//   background-color: rgb(44, 54, 69);
+//   color: #ffff;
+//   border: 1px solid rgb(44, 54, 69);
+// }
+
+// .custom-tooltip {
+//   --bs-tooltip-bg: var(--bd-violet-bg);
+//   --bs-tooltip-color: var(--bs-white);
+// }
+
+// // Para scroll
+// .scrollbar {
+//   float: left;
+//   background: #fff;
+//   overflow-y: scroll;
+// }
+
+// .scrollbar-indigo {
+//   scrollbar-color: #4285f4 #f5f5f5;
+// }
+
+// .scrollbar-indigo::-webkit-scrollbar-track {
+//   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+//   background-color: #f5f5f5;
+//   border-radius: 10px;
+// }
+
+// .scrollbar-indigo::-webkit-scrollbar {
+//   width: 9px;
+//   background-color: #f5f5f5;
+// }
+
+// .scrollbar-indigo::-webkit-scrollbar-thumb {
+//   border-radius: 10px;
+//   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+//   background-color: #4285f4;
+// }
+
+// .bordered-indigo::-webkit-scrollbar-track {
+//   -webkit-box-shadow: none;
+//   border: 1px solid #4285f4;
+// }
+
+// .bordered-indigo::-webkit-scrollbar-thumb {
+//   -webkit-box-shadow: none;
+// }
+// .square::-webkit-scrollbar-track {
+//   border-radius: 0 !important;
+// }
+
+// .square::-webkit-scrollbar-thumb {
+//   border-radius: 0 !important;
+// }
+
+// .thin::-webkit-scrollbar {
+//   width: 6px;
+// }
+
+// // custom pdf firma
+// body
+//   > div:nth-child(7)
+//   > div
+//   > div
+//   > div.modal-body
+//   > div
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(2)
+//   > div
+//   > div {
+//   // background-color: #b80c0c;
+//   visibility: hidden;
+// }
+
+// body
+//   > div:nth-child(7)
+//   > div
+//   > div
+//   > div.modal-body
+//   > div
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(3) {
+//   margin-right: 0px;
+//   width: 902px;
+// }
+
+// body
+//   > div:nth-child(7)
+//   > div
+//   > div
+//   > div.modal-body
+//   > div
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(1) {
+//   position: absolute;
+//   top: auto;
+//   bottom: 6%;
+//   width: 902px;
+// }
+
+// body
+//   > div:nth-child(7)
+//   > div
+//   > div
+//   > div.modal-body
+//   > div
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(2) {
+//   position: absolute;
+//   right: 0px;
+//   z-index: 1;
+//   height: 100%;
+//   width: 0px;
+// }
+
+// body
+//   > div:nth-child(7)
+//   > div
+//   > div
+//   > div.modal-body
+//   > div
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(3) {
+//   position: relative;
+//   margin-right: 0px;
+//   width: 902px;
+//   height: 940px;
+// }
+
+// body
+//   > div:nth-child(7)
+//   > div
+//   > div
+//   > div.modal-body
+//   > div
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(2)
+//   > div
+//   > div {
+//   width: 350px;
+//   height: 100%;
+//   display: none;
+//   top: 0px;
+//   right: 0px;
+//   position: absolute;
+//   padding: 0.7rem 1rem;
+//   // font-family: &quot;Open Sans&quot;, sans-serif;
+//   box-sizing: border-box;
+//   background: rgb(245, 245, 245);
+// }
+
+// // #\@pdfme\/ui-paper0 {
+// // 	left: 159.896px !important;
+// // }
+
+// body
+//   > div:nth-child(7)
+//   > div
+//   > div
+//   > div.modal-body
+//   > div
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(3) {
+//   width: 797px !important;
+// }
+// body
+//   > div:nth-child(7)
+//   > div
+//   > div
+//   > div.modal-body
+//   > div
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(2)
+//   > div
+//   > button {
+//   display: none !important;
+// }
+// body
+//   > div:nth-child(7)
+//   > div
+//   > div
+//   > div.modal-body
+//   > div
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(1) {
+//   width: 898px !important;
+// }
+
+// body
+//   > div:nth-child(7)
+//   > div
+//   > div
+//   > div.modal-body
+//   > div
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(3) {
+//   left: 159.896px !important;
+//   overflow: hidden !important;
+// }
+// //
+// #main-wrapper
+//   > div
+//   > div
+//   > div:nth-child(2)
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(2)
+//   > div
+//   > div {
+//   display: none !important;
+// }
+
+// #main-wrapper
+//   > div
+//   > div
+//   > div:nth-child(2)
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(1) {
+//   width: 1550px !important;
+// }
+
+// #main-wrapper
+//   > div
+//   > div
+//   > div:nth-child(2)
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(2) {
+//   width: 0px !important;
+// }
+
+// #main-wrapper
+//   > div
+//   > div
+//   > div:nth-child(2)
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(3) {
+//   margin-right: 0px !important;
+//   width: 1126px !important;
+//   left: 180px;
+//   overflow: hidden !important;
+// }
+// #main-wrapper
+//   > div
+//   > div
+//   > div:nth-child(2)
+//   > div.col-10
+//   > div
+//   > div
+//   > div
+//   > div:nth-child(2)
+//   > div
+//   > button {
+//   display: none !important;
+// }
+// // #main-wrapper > div > div > div:nth-child(2) > div.col-10 > div > div > div > div:nth-child(3) {
+// // 	left: 550px;
+// // 	overflow: hidden !important;
+// // }
+// // custom pdf firma
+
+// .contenedorPDF {
+//   display: flex;
+//   flex-direction: row;
+// }
+
+// .modal-firma {
+//   display: none; /* Hidden by default */
+//   position: fixed; /* Stay in place */
+//   z-index: 1; /* Sit on top */
+//   /*padding-top: 200px; */ /* Location of the box */
+//   left: 0;
+//   top: 0;
+//   width: 100%; /* Full width */
+//   height: 100%; /* Full height */
+//   overflow: auto; /* Enable scroll if needed */
+//   background-color: rgb(0, 0, 0); /* Fallback color */
+//   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+//   border: 1px solid red;
+// }
+// /* Modal Content */
+// .modal-content-firma {
+//   background-color: #022c57;
+//   margin: auto;
+//   padding: 5px;
+//   border: 1px solid #888;
+//   /*width: 80%;*/
+//   /*position: relative*/
+// }
+// .modal-content-firma > div {
+//   position: relative;
+// }
+// .fotter-modal {
+//   display: flex;
+//   justify-content: flex-end;
+// }
+// .fotter-modal > button {
+//   width: 70px;
+//   margin-right: 5px;
+//   margin-top: 5px;
+// }
+// .fotter-modal > button:nth-of-type(2) {
+//   margin-right: 0px;
+// }
+// .body-modal > canvas {
+//   border: 1px solid #888;
+// }
+// .body-modal > div {
+//   position: absolute;
+//   top: 0px;
+// }
+
+// //Dialog custom class
+// .modal-90w {
+//   max-width: none !important;
+//   width: 90%;
+// }
