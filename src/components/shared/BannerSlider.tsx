@@ -83,7 +83,7 @@ const BannerSlider = () => {
       animate={{ opacity: 1 }}
       className="relative "
     >
-      <div className="w-[100vw] pt-6 sm:pt-28">
+      <div className="w-[100vw] pt-28">
         <Slide {...properties}>
           {images.map((e) => {
             return (

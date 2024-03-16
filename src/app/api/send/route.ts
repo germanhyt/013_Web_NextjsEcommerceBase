@@ -5,14 +5,14 @@ import { NextRequest, NextResponse } from "next/server";
 const resend = new Resend("re_gzZeiznQ_7LG5fz6TNnZghQbHGaRBZcT7");
 
 export async function POST(req: NextRequest) {
-  const { name, phone, email, image } = await req.json();
-  // console.log("image ", image);
+  const { name, phone, email, image, total } = await req.json();
+  console.log("total ", total);
   try {
     const data = await resend.emails.send({
       from: "Ecommerce <onboarding@resend.dev>",
       to: [email, "germanhuaytalla23@gmail.com"],
       subject: "Hola, somos Ecommerce",
-      react: EmailTemplate({ name, phone, email, image }),
+      react: EmailTemplate({ name, phone, email, image, total }),
       text: "hello from Resend and NextJS",
     });
 

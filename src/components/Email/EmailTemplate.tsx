@@ -16,6 +16,7 @@ interface EmailTemplateProps {
   phone: string;
   email: string;
   image: string;
+  total: string;
 }
 
 const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
@@ -23,6 +24,7 @@ const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   phone,
   email,
   image,
+  total,
 }) => (
   <Html>
     <Head />
@@ -46,6 +48,9 @@ const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
           </Text>
           <Text className=" text-primary-email text-lg leading-7 mb-4">
             <span className="font-bold">Email: </span> {email}
+          </Text>
+          <Text className=" text-primary-email text-lg leading-7 mb-4">
+            <span className="font-bold">Monto Total: </span>s/. {total}
           </Text>
           <div className="my-2">
             <Text className=" text-primary-email text-lg leading-7 mb-4">
