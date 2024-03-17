@@ -45,10 +45,8 @@ const PageHeader = () => {
             <Link href="/">
               {activeTheme !== "dark" ? (
                 <Image
-                  loader={() => {
-                    return "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1710111058/Ecommerce-frontend/logo-dark_r0lplu.svg";
-                  }}
-                  src="image.png"
+                  loader={({ src }) => src}
+                  src="https://res.cloudinary.com/dz0ajaf3i/image/upload/v1710111058/Ecommerce-frontend/logo-dark_r0lplu.svg"
                   alt="Image description"
                   className="w-14"
                   width={300}
@@ -56,10 +54,8 @@ const PageHeader = () => {
                 />
               ) : (
                 <Image
-                  loader={() => {
-                    return "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1710110417/Ecommerce-frontend/logo-dark_uhlfmo.png";
-                  }}
-                  src="image.png"
+                  loader={({ src }) => src}
+                  src="https://res.cloudinary.com/dz0ajaf3i/image/upload/v1710110417/Ecommerce-frontend/logo-dark_uhlfmo.png"
                   alt="Image description"
                   className="w-14"
                   width={300}
@@ -145,6 +141,23 @@ const PageHeader = () => {
                 Contáctame
               </button>
             </div> */}
+
+            <div className="py-8 flex sm:hidden justify-start items-center ">
+              <div
+                className=" bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
+                onClick={() => {
+                  setTheme(activeTheme);
+                }}
+                aria-label="Theme Switcher"
+              >
+                {activeTheme === "dark" ? (
+                  <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+                ) : (
+                  <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+                )}
+              </div>
+              <CartWidget />
+            </div>
           </motion.div>
 
           {/* screenn > small > 640px */}

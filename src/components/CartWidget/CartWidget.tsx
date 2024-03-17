@@ -59,7 +59,7 @@ const CartWidget = () => {
                   }}
                   className="menuCart shadow-inner"
                 >
-                  <p className="font-nunito text-start px-2">
+                  <p className="font-nunito text-start sm:px-5">
                     Lista de Productos
                   </p>
                   {cartProducts.map((cp) => {
@@ -94,7 +94,7 @@ const CartWidget = () => {
                     );
                   })}
                   <Link href="/cart">
-                    <div className="w-full text-center bg-primary-dark text-white py-1">
+                    <div className="w-full text-center bg-primary-dark text-white py-1 hover:bg-secondary-dark">
                       Concluir compra
                     </div>
                   </Link>

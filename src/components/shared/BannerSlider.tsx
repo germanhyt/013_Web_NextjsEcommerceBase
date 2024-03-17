@@ -5,60 +5,9 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import Image from "next/image";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
+import { bannerSliderImages } from "@/assets/data/bannerData";
 
 const BannerSlider = () => {
-  const images = [
-    {
-      id: 1,
-      img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1710026484/Ecommerce-frontend/Frame_37_acvjho.svg",
-      title_right: "",
-      title_middle: "Bienvenido👋",
-      show_title_middle: true,
-    },
-    {
-      id: 2,
-      img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1709948228/Ecommerce-frontend/frutos-secos_vhd3fh.svg",
-      title_right: "Frutos Secos Naturales",
-      title_middle: "",
-      show_title_middle: false,
-    },
-    {
-      id: 3,
-      img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1709948228/Ecommerce-frontend/menestras_merg9w.svg",
-      title_right: "Menestras Nacionales e Importados",
-      title_middle: "",
-      show_title_middle: false,
-    },
-    {
-      id: 4,
-      img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1709948229/Ecommerce-frontend/embutidos_o438sw.svg",
-      title_right: "Embutidos San Fernando",
-      title_middle: "",
-      show_title_middle: false,
-    },
-    {
-      id: 5,
-      img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1709948227/Ecommerce-frontend/comida-animales_rmntla.svg",
-      title_right: "Comida para Animales",
-      title_middle: "",
-      show_title_middle: false,
-    },
-    {
-      id: 6,
-      img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1709948227/Ecommerce-frontend/harinas_cc8obz.svg",
-      title_right: "Harinas Naturales",
-      title_middle: "",
-      show_title_middle: false,
-    },
-    {
-      id: 7,
-      img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1709948227/Ecommerce-frontend/limpieza_ykkaij.svg",
-      title_right: "Productos de Limpieza",
-      title_middle: "",
-      show_title_middle: false,
-    },
-  ];
-
   // const buttonStyle = {
   //   width: "30px",
   //   border: "0px",
@@ -66,13 +15,13 @@ const BannerSlider = () => {
 
   const properties = {
     prevArrow: (
-      <button className=" bg-white rounded-lg hover:scale-[0.95] border-2 border-primary-dark">
-        <GrFormPrevious className="size-10 " />
+      <button className="bg-white rounded-lg hover:scale-[0.95] border-2 border-primary-dark">
+        <GrFormPrevious className="size-10" />
       </button>
     ),
     nextArrow: (
       <button className=" bg-white rounded-lg hover:scale-[0.95] border-2 border-primary-dark">
-        <GrFormNext className="size-10 " />
+        <GrFormNext className="size-10" />
       </button>
     ),
   };
@@ -81,11 +30,11 @@ const BannerSlider = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="relative "
+      className="relative"
     >
       <div className="w-[100vw] pt-28">
         <Slide {...properties}>
-          {images.map((e) => {
+          {bannerSliderImages.map((e) => {
             return (
               <div key={e.id} className="bg-cover overflow-hidden relative">
                 {e.show_title_middle ? (
@@ -108,12 +57,10 @@ const BannerSlider = () => {
                 {/* <img className="w-full" src={`${e.img}`} alt="img" /> */}
 
                 <Image
-                  loader={() => {
-                    return e.img;
-                  }}
-                  src="image.png"
+                  loader={({ src }) => src}
+                  src={e.img}
                   alt="Image description"
-                  className="w-full rounded-lg"
+                  className="w-full rounded-lg bg-cover"
                   width={300}
                   height={300}
                 />

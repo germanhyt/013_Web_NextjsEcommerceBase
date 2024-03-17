@@ -27,7 +27,7 @@ const ProductSingle = ({ title, category, image, numberproduct }: IProps) => {
         href={`/products/${numberproduct}`}
         aria-label="Single Project"
       >
-        <div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
+        <div className="rounded-xl shadow-lg hover:shadow-2xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-primary-dark">
           <div>
             {/* <img
               src={image}
@@ -46,10 +46,10 @@ const ProductSingle = ({ title, category, image, numberproduct }: IProps) => {
             />
           </div>
           <div className="text-center px-4 py-6">
-            <p className="break-all font-general-medium text-lg md:text-xl text-ternary-dark dark:text-ternary-light mb-2">
+            <p className="break-all font-general-medium text-md sm:text-lg md:text-xl text-ternary-dark dark:text-ternary-light mb-2">
               {title}
             </p>
-            <span className="break-all  text-lg text-ternary-dark dark:text-ternary-light">
+            <span className="break-all text-sm sm:text-lg text-ternary-dark dark:text-ternary-light">
               {category}
             </span>
           </div>
