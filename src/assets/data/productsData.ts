@@ -39,7 +39,7 @@ export interface Product {
 
 export const productsData: Product[] = [
   {
-    id: 1,
+    id: 151,
     title: "Producto 1",
     category: "Frutos Secos Naturales",
     img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1710005891/Ecommerce-frontend/istockphoto-922721264-612x612_tvrtke.png",
@@ -101,7 +101,7 @@ export const productsData: Product[] = [
     },
   },
   {
-    id: 2,
+    id: 152,
     title: "Producto 2",
     category: "Harinas Naturales",
     img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1710005891/Ecommerce-frontend/istockphoto-922721264-612x612_tvrtke.png",
@@ -163,8 +163,8 @@ export const productsData: Product[] = [
     },
   },
   {
-    id: 3,
-    title: "Producto 1",
+    id: 153,
+    title: "Producto 3",
     category: "Embutidos",
     img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1710005891/Ecommerce-frontend/istockphoto-922721264-612x612_tvrtke.png",
     ProductHeader: {
@@ -225,8 +225,8 @@ export const productsData: Product[] = [
     },
   },
   {
-    id: 4,
-    title: "Producto 1",
+    id: 154,
+    title: "Producto 4",
     category: "Comida para animales",
     img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1710005891/Ecommerce-frontend/istockphoto-922721264-612x612_tvrtke.png",
     ProductHeader: {
