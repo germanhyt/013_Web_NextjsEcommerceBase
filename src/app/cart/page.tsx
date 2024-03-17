@@ -28,7 +28,7 @@ interface IFormData {
 
 const Cart = () => {
   // Hooks
-  const { cartProducts, deleteProductToCart, calculateTotal } =
+  const { cartProducts, deleteProductToCart, setCartProducts, calculateTotal } =
     useContext(CartContext);
 
   const [loading, setLoading] = useState<boolean>(false);
@@ -130,6 +130,7 @@ const Cart = () => {
         timer: 1500,
       });
       cancelOrder();
+      setCartProducts([]);
     } else {
       alert("Error al enviar el correo electrónico");
       Swal.fire({
