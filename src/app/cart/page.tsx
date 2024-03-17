@@ -164,9 +164,9 @@ const Cart = () => {
         <motion.section
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="mx-auto py-8 sm:py-16 bg-primary-light dark:bg-secondary-dark"
+          className="mt-28  mx-auto py-8 sm:py-12  bg-primary-light dark:bg-secondary-dark "
         >
-          <div className="container mt-28 ">
+          <div className="container">
             {cartProducts.length > 0 ? (
               <>
                 <div className="flex flex-col sm:flex-row gap-2">
@@ -174,7 +174,7 @@ const Cart = () => {
                     {cartProducts.map((cp) => {
                       return (
                         <div key={cp.id}>
-                          <div className="flex flex-col sm:flex-row gap-2 py-4 mt-4  border-2 border-primary-dark rounded-lg">
+                          <div className="flex flex-col dark:bg-primary-dark sm:flex-row gap-2 py-4 mt-4  border-2 border-primary-dark rounded-lg">
                             <Image
                               loader={({ src }) => src}
                               src={cp.img}
@@ -184,15 +184,15 @@ const Cart = () => {
                               height={300}
                             />
 
-                            <div className="flex flex-col md:flex-row items-center mx-auto  my-2 sm:my-5">
-                              <p>{cp.name}</p>
-                              <p>
+                            <div className="flex flex-col md:flex-row items-center mx-auto  my-2 sm:my-5 ">
+                              <p className="dark:text-white">{cp.name}</p>
+                              <p className="dark:text-white">
                                 <span className="font-nunito font-bold">
                                   Unidades:
                                 </span>{" "}
                                 {cp.quantity}
                               </p>
-                              <p>
+                              <p className="dark:text-white">
                                 <span className="font-nunito font-bold">
                                   Subtotal:{" "}
                                 </span>{" "}
@@ -202,9 +202,9 @@ const Cart = () => {
                             <div className="flex items-center justify-center mx-auto my-2 sm:my-5">
                               <button
                                 onClick={() => deleteProductToCart(cp)}
-                                className="btnDelete hover:bg-primary-dark hover:text-white"
+                                className="btnDelete border-2 border-primary-dark px-2 py-1 rounded-lg hover:bg-primary-dark hover:text-white dark:hover:bg-secondary-dark dark:text-white dark:border-2 dark:border-primary-light dark:px-2 dark:py-1 dark:rounded-lg"
                               >
-                                <MdDelete />
+                                <MdDelete className="text-lg" />
                               </button>
                             </div>
                           </div>
@@ -224,7 +224,7 @@ const Cart = () => {
                         {calculateTotal()}
                       </p>
                       <Button
-                        className="bg-primary-dark text-white rounded-md px-2 py-1"
+                        className="bg-primary-dark hover:bg-secondary-dark dark:hover:border-2 dark:hover:border-primary-dark text-white rounded-md px-2 py-1"
                         onClick={continueOrder}
                       >
                         Finalizar Compra
