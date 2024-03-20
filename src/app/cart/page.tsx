@@ -203,7 +203,7 @@ const Cart = () => {
                             <div className="flex items-center justify-center mx-auto my-2 sm:my-5">
                               <button
                                 onClick={() => deleteProductToCart(cp)}
-                                className="btnDelete border-2 border-primary-dark px-2 py-1 rounded-lg hover:bg-primary-dark hover:text-white dark:hover:bg-secondary-dark dark:text-white dark:border-2 dark:border-primary-light dark:px-2 dark:py-1 dark:rounded-lg"
+                                className="btnDelete border-2 border-primary-dark px-2 py-1 rounded-lg hover:bg-primary-dark text-black hover:text-white dark:hover:bg-secondary-dark dark:text-white dark:border-2 dark:border-primary-light dark:px-2 dark:py-1 dark:rounded-lg"
                               >
                                 <MdDelete className="text-lg" />
                               </button>
@@ -255,7 +255,7 @@ const Cart = () => {
             open={openModal}
             className="flex items-center justify-center"
           >
-            <div className="w-full mx-4 sm:w-6/12 rounded-lg bg-primary-light border-2 text-center border-primary-dark ">
+            <div className="w-full mx-4 sm:w-6/12 rounded-lg bg-primary-light text-black border-2 text-center border-primary-dark ">
               <h3 className="py-4 font-nunito font-bold">
                 Formulario de Compra
               </h3>
