@@ -2,7 +2,8 @@ import { Resend } from "resend";
 import EmailTemplate from "@/components/Email/EmailTemplate";
 import { NextRequest, NextResponse } from "next/server";
 
-const resend = new Resend("re_gzZeiznQ_7LG5fz6TNnZghQbHGaRBZcT7");
+const resend = new Resend(`${process.env.NEXT_PUBLIC_RESEND_API_KEY}`);
+console.log("resend ", resend);
 
 export async function POST(req: NextRequest) {
   const { name, phone, email, image, total } = await req.json();
@@ -16,7 +17,7 @@ export async function POST(req: NextRequest) {
       text: "hello from Resend and NextJS",
     });
 
-    console.log(data);
+    // console.log("resend", data);
 
     return NextResponse.json(
       {

@@ -1,6 +1,7 @@
 import FormInput from "@/components/reusable/FormInput";
 import { FormEvent, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -14,14 +15,28 @@ const ContactForm = () => {
           "service_988p1xn",
           "template_twd2ypu",
           form.current,
-          "5il5XPnUwwcjNxkaM"
+          process.env.NEXT_PUBLIC_EMAILJS_USER_ID
         )
         .then(
           (result) => {
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Correo enviado correctamente",
+              showConfirmButton: false,
+              timer: 1500,
+            });
             console.log(result.text);
+
             if (form.current) form.current.reset(); //reset inputs of form
           },
           (error) => {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Error al enviar el correo electrónico",
+            });
+
             console.log(error.text);
           }
         );
@@ -85,13 +100,13 @@ const ContactForm = () => {
             ></textarea>
           </div>
 
-          <div className="font-nunito w-full sm:w-36 text-white text-center font-medium tracking-wider bg-secondary-dark hover:bg-primary-dark focus:ring-1 focus:bg-ternary-dark rounded-lg mt-6 duration-500">
+          <div className="font-nunito w-full ">
             <button
               title="Enviar mensaje"
               aria-label="Send Message"
               type="submit"
               value="Enviar"
-              className=""
+              className="sm:w-36 text-white text-center font-medium tracking-wider bg-secondary-dark hover:bg-primary-dark focus:ring-1 focus:bg-ternary-dark rounded-lg mt-6 duration-500"
             >
               Enviar
             </button>

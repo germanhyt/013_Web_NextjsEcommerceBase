@@ -132,7 +132,6 @@ const Cart = () => {
       cancelOrder();
       setCartProducts([]);
     } else {
-      alert("Error al enviar el correo electrónico");
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -151,7 +150,7 @@ const Cart = () => {
     formData.append("upload_preset", "preset-react");
 
     const res = await axios.post(
-      "https://api.cloudinary.com/v1_1/dz0ajaf3i/image/upload",
+      `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLODUINARY_API_KEY}/image/upload`,
       formData
     );
 
