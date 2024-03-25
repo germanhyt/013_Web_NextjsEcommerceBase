@@ -81,7 +81,7 @@ const ProductInfo = () => {
               >
                 -
               </Button>
-              <p>Cantidad: {qty}</p>
+              <p className="dark:text-white">Cantidad: {qty}</p>
               <Button
                 className="z-0 w-8  py-1 rounded-md bg-primary-light text-primary-dark  border-2 border-primary-dark hover:text-white hover:bg-primary-dark"
                 onClick={() => {
