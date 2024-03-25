@@ -303,7 +303,7 @@ const Cart = () => {
                       type="mail"
                       id="email2"
                       name="email2"
-                      placeholder="Confirme su correo electrónico,,,"
+                      placeholder="Confirme su correo electrónico..."
                       onChange={infoBuyerPerson}
                       value={formData.email2}
                       pattern={formData.email}

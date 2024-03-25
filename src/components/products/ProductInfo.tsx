@@ -45,7 +45,7 @@ const ProductInfo = () => {
         <div className="w-full sm:w-1/3 text-left">
           <div className="mb-7">
             <p className="font-general-regular text-2xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
-              {p.ProductsInfo.ProductHeading}´
+              {p.ProductsInfo.ProductHeading}
             </p>
             <ul className="leading-loose">
               {p.ProductsInfo.ProductDetails.map((info) => {
@@ -93,7 +93,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex justify-center items-center">
               <Button
-                className="w-full bg-primary-dark text-white hover:scale-[0.95] duration-500"
+                className="w-full py-1 bg-primary-dark hover:bg-secondary-dark dark:hover:bg-primary-light text-white rounded-sm dark:hover:text-primary-dark dark:hover:border-2 dark:hover:border-primary-dark "
                 onClick={() => {
                   const prod = {
                     id: p.id,
