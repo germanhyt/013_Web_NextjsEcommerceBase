@@ -44,16 +44,16 @@ export const bannerSliderImages: BannerData[] = [
   },
   {
     id: 6,
-    img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1710635778/Ecommerce-frontend/harinas_fo31b7.svg",
+    img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1711477219/Ecommerce-frontend/harinas_orkhmq.svg",
     title_right: "Harinas Naturales",
     title_middle: "",
     show_title_middle: false,
   },
-  {
-    id: 7,
-    img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1709948227/Ecommerce-frontend/limpieza_ykkaij.svg",
-    title_right: "Productos de Limpieza",
-    title_middle: "",
-    show_title_middle: false,
-  },
+  // {
+  //   id: 7,
+  //   img: "https://res.cloudinary.com/dz0ajaf3i/image/upload/v1709948227/Ecommerce-frontend/limpieza_ykkaij.svg",
+  //   title_right: "Productos de Limpieza",
+  //   title_middle: "",
+  //   show_title_middle: false,
+  // },
 ];
