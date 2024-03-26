@@ -29,16 +29,6 @@ const ProductHeader = () => {
               {p.ProductHeader.tags}
             </span>
           </div>
-          <div className="flex items-center">
-            <FiExternalLink className="text-lg text-ternary-dark dark:text-ternary-light" />
-            <a
-              href={p.ProductHeader.link}
-              target="__blank"
-              className="font-general-regular hover:underline hover:text-[#0123e7] break-all ml-2 leading-none text-primary-dark dark:text-primary-light"
-            >
-              Link de Proyecto
-            </a>
-          </div>
         </div>
       </div>
     ));

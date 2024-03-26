@@ -6,6 +6,7 @@ import "@/assets/styles/app/scss/app.scss";
 import PageFooter from "@/components/shared/PageFooter";
 import PageHeader from "@/components/shared/PageHeader";
 import CartProvider from "@/core/hooks/CartContext";
+import ButtonWhatsapp from "@/components/shared/ButtonWhatsapp";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body className={inter.className}>
+        <ButtonWhatsapp />
         <ProductsProvider>
           <CartProvider>
-            <div className="w-[100vw] m-0 p-0 border-none box-border transition duration-300 bg-secondary-light dark:bg-primary-dark">
+            <div className="w-[100vw] m-0 p-0 border-none box-border transition duration-150 bg-secondary-light dark:bg-primary-dark">
               <PageHeader />
               {children}
               <PageFooter />

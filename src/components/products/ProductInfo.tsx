@@ -56,7 +56,7 @@ const ProductInfo = () => {
                   >
                     <span>{info.title}: </span>
                     <a
-                      href="https://portfolio-web-ghyt.netlify.app/"
+                      href=""
                       className={
                         info.title === "Website" || info.title === "Phone"
                           ? "hover:underline hover:text-primary-dark dark:hover:text-white cursor-pointer duration-300"

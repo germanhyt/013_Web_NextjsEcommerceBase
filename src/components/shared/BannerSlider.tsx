@@ -15,12 +15,12 @@ const BannerSlider = () => {
 
   const properties = {
     prevArrow: (
-      <button className="bg-white rounded-lg hover:scale-[0.95] border-2 border-primary-dark">
+      <button className="text-black bg-white rounded-lg hover:scale-[0.95] border-2 border-primary-dark">
         <GrFormPrevious className="size-10" />
       </button>
     ),
     nextArrow: (
-      <button className=" bg-white rounded-lg hover:scale-[0.95] border-2 border-primary-dark">
+      <button className=" text-black bg-white rounded-lg hover:scale-[0.95] border-2 border-primary-dark">
         <GrFormNext className="size-10" />
       </button>
     ),
